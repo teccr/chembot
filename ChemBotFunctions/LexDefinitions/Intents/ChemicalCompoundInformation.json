@@ -1,0 +1,136 @@
+{
+    "name": "ChemicalCompoundInformation", 
+    "conclusionStatement": {
+        "messages": [
+            {
+                "content": "Have a nice day!", 
+                "contentType": "PlainText"
+            }, 
+            {
+                "content": "See you soon!", 
+                "contentType": "PlainText"
+            }, 
+            {
+                "content": "Talk to you soon.", 
+                "contentType": "PlainText"
+            }
+        ]
+    }, 
+    "sampleUtterances": [
+        "what is the {PropertyToSearch} of {CompoundToSearch}", 
+        "show me data for {CompoundToSearch}", 
+        "show {PropertyToSearch} for {CompoundToSearch}", 
+        "Can you show me information for {CompoundToSearch}", 
+        "show me {PropertyToSearch} for {CompoundToSearch}", 
+        "get {PropertyToSearch} for {CompoundToSearch}", 
+        "give me {PropertyToSearch} for {CompoundToSearch}", 
+        "show me {PropertyToSearch}", 
+        "get {PropertyToSearch}", 
+        "get data for {CompoundToSearch}", 
+        "Need {PropertyToSearch}", 
+        "Need {PropertyToSearch} for {CompoundToSearch}"
+    ], 
+    "slots": [
+        {
+            "slotType": "ChemicalProperty", 
+            "name": "PropertyToSearch", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "What chemical property should I use?", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"buttons\":[]}]}"
+            }, 
+            "priority": 2, 
+            "slotTypeVersion": "2", 
+            "sampleUtterances": [
+                "It's {PropertyToSearch}", 
+                "It is {PropertyToSearch}", 
+                "Use {PropertyToSearch}"
+            ]
+        }, 
+        {
+            "slotType": "CompoundId", 
+            "name": "CompoundToSearch", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "What criteria value should I use?", 
+                        "contentType": "PlainText"
+                    }, 
+                    {
+                        "content": "What is the value of the search criteria?", 
+                        "contentType": "PlainText"
+                    }, 
+                    {
+                        "content": "Please specify search criteria for the search", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"buttons\":[]}]}"
+            }, 
+            "priority": 1, 
+            "slotTypeVersion": "3", 
+            "sampleUtterances": [
+                "Use {CompoundToSearch}", 
+                "It is {CompoundToSearch}", 
+                "It's {CompoundToSearch}"
+            ]
+        }, 
+        {
+            "slotType": "Attachments", 
+            "name": "Attachments", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "Do you want to attach additional data?", 
+                        "contentType": "PlainText"
+                    }, 
+                    {
+                        "content": "Should I add data to the request?", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"subTitle\":\"Select an attachment\",\"title\":\"Attachment Type\",\"buttons\":[{\"text\":\"None\",\"value\":\"None\"},{\"text\":\"Structure\",\"value\":\"Structure\"},{\"text\":\"SDF\",\"value\":\"SDF\"}]}]}"
+            }, 
+            "priority": 4, 
+            "slotTypeVersion": "2", 
+            "sampleUtterances": [
+                "Include {Attachments}"
+            ]
+        }, 
+        {
+            "slotType": "CompoundIdType", 
+            "name": "IdType", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 3, 
+                "messages": [
+                    {
+                        "content": "What is the ID Type used for the search?", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"title\":\"Choose an identifier type:\",\"buttons\":[{\"text\":\"name\",\"value\":\"name\"},{\"text\":\"cid\",\"value\":\"cid\"},{\"text\":\"smiles\",\"value\":\"smiles\"},{\"text\":\"inchi key\",\"value\":\"inchi key\"},{\"text\":\"sid\",\"value\":\"sid\"}]}]}"
+            }, 
+            "priority": 3, 
+            "slotTypeVersion": "1", 
+            "sampleUtterances": []
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:904809727060:function:ChemBotBackEnd", 
+            "messageVersion": "1.0"
+        }
+    }
+}

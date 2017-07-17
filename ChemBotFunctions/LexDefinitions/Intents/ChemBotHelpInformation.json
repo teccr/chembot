@@ -1,0 +1,43 @@
+{
+    "name": "ChemBotHelpInformation", 
+    "sampleUtterances": [
+        "help me", 
+        "please help me", 
+        "I need help", 
+        "I need some help", 
+        "I need assistence", 
+        "can you help me", 
+        "can you assist me"
+    ], 
+    "slots": [
+        {
+            "slotType": "ChemBotHelpCriteriaSelection", 
+            "name": "helpCriteria", 
+            "slotConstraint": "Required", 
+            "valueElicitationPrompt": {
+                "maxAttempts": 2, 
+                "messages": [
+                    {
+                        "content": "What do you want to review?", 
+                        "contentType": "PlainText"
+                    }, 
+                    {
+                        "content": "Sure, I will assist you.", 
+                        "contentType": "PlainText"
+                    }
+                ], 
+                "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"title\":\"Please choose one topic.\",\"buttons\":[{\"text\":\"Chemical Properties\",\"value\":\"Chemical Properties\"},{\"text\":\"ID Type\",\"value\":\"ID Type\"},{\"text\":\"Search Criteria\",\"value\":\"Search Criteria\"},{\"text\":\"Flash Card\",\"value\":\"Flash Card\"}]}]}"
+            }, 
+            "priority": 1, 
+            "slotTypeVersion": "1", 
+            "sampleUtterances": []
+        }
+    ], 
+    "fulfillmentActivity": {
+        "type": "CodeHook", 
+        "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:904809727060:function:ChemBotBackEnd", 
+            "messageVersion": "1.0"
+        }
+    }
+}

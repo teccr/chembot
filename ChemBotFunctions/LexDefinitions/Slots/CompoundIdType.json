@@ -1,0 +1,21 @@
+{
+    "enumerationValues": [
+        {
+            "value": "smiles"
+        }, 
+        {
+            "value": "inchi key"
+        }, 
+        {
+            "value": "name"
+        }, 
+        {
+            "value": "sid"
+        }, 
+        {
+            "value": "cid"
+        }
+    ], 
+    "name": "CompoundIdType", 
+    "description": "Type of Compound Identifiers"
+}

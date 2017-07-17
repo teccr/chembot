@@ -1,0 +1,18 @@
+{
+    "version": "$LATEST", 
+    "enumerationValues": [
+        {
+            "value": "ID Type"
+        }, 
+        {
+            "value": "Search Criteria"
+        }, 
+        {
+            "value": "Flash Card"
+        }, 
+        {
+            "value": "Chemical Properties"
+        }
+    ], 
+    "name": "ChemBotHelpCriteriaSelection"
+}

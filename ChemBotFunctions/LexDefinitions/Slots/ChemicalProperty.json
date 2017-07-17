@@ -1,0 +1,135 @@
+{
+    "enumerationValues": [
+        {
+            "value": "3d volume"
+        }, 
+        {
+            "value": "isomeric smiles"
+        }, 
+        {
+            "value": "canonical smiles"
+        }, 
+        {
+            "value": "smiles"
+        }, 
+        {
+            "value": "mass"
+        }, 
+        {
+            "value": "feature caution count 3d"
+        }, 
+        {
+            "value": "flash card"
+        }, 
+        {
+            "value": "fingerprint 2d"
+        }, 
+        {
+            "value": "feature anion count 3d"
+        }, 
+        {
+            "value": "defined atom stereo count"
+        }, 
+        {
+            "value": "rotatable bond count"
+        }, 
+        {
+            "value": "feature count 3d"
+        }, 
+        {
+            "value": "undefined bond stereo count"
+        }, 
+        {
+            "value": "defined bond stereo count"
+        }, 
+        {
+            "value": "mf"
+        }, 
+        {
+            "value": "x steric 3d"
+        }, 
+        {
+            "value": "undefined atom stereo count"
+        }, 
+        {
+            "value": "feature donor count 3d"
+        }, 
+        {
+            "value": "atom stereo count"
+        }, 
+        {
+            "value": "formula mass"
+        }, 
+        {
+            "value": "charge"
+        }, 
+        {
+            "value": "feature hydrophone count 3d"
+        }, 
+        {
+            "value": "exact mass"
+        }, 
+        {
+            "value": "synonyms"
+        }, 
+        {
+            "value": "isotope count"
+        }, 
+        {
+            "value": "z steric 3d"
+        }, 
+        {
+            "value": "InChi"
+        }, 
+        {
+            "value": "heavy atom count"
+        }, 
+        {
+            "value": "mw"
+        }, 
+        {
+            "value": "molecular weight"
+        }, 
+        {
+            "value": "H bond acceptor count"
+        }, 
+        {
+            "value": "conformer count 3d"
+        }, 
+        {
+            "value": "covalent unit count"
+        }, 
+        {
+            "value": "formula "
+        }, 
+        {
+            "value": "volume 3d"
+        }, 
+        {
+            "value": "feature acceptor count 3d"
+        }, 
+        {
+            "value": "feature ring count 3d"
+        }, 
+        {
+            "value": "effective rotor count 3d"
+        }, 
+        {
+            "value": "molecular formula"
+        }, 
+        {
+            "value": "bond stereo count"
+        }, 
+        {
+            "value": "y steric 3d"
+        }, 
+        {
+            "value": "H bond donor count"
+        }, 
+        {
+            "value": "conformer model RMSD 3d"
+        }
+    ], 
+    "name": "ChemicalProperty", 
+    "description": "Chemical property to search"
+}

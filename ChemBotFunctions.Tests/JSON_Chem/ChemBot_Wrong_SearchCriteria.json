@@ -1,0 +1,22 @@
+﻿{
+  "currentIntent": {
+    "slots": {
+      "CompoundToSearch": "176",
+      "IdType": "name",
+      "PropertyToSearch": "MW",
+      "Attachments": "None"
+    },
+    "name": "ChemicalCompoundInformation",
+    "confirmationStatus": "None"
+  },
+  "bot": {
+    "alias": "$LATEST",
+    "version": "$LATEST",
+    "name": "ChemBotAssitant"
+  },
+  "userId": "fmarinWindows",
+  "invocationSource": "DialogCodeHook",
+  "outputDialogMode": "Text",
+  "messageVersion": "1.0",
+  "sessionAttributes": {}
+}

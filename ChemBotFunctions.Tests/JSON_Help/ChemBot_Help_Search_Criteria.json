@@ -1,0 +1,19 @@
+﻿{
+  "currentIntent": {
+    "slots": {
+      "helpCriteria": "Search Criteria"
+    },
+    "name": "ChemBotHelpInformation",
+    "confirmationStatus": "None"
+  },
+  "bot": {
+    "alias": "$LATEST",
+    "version": "$LATEST",
+    "name": "ChemBotAssitant"
+  },
+  "userId": "fmarinWindows",
+  "invocationSource": "DialogCodeHook",
+  "outputDialogMode": "Text",
+  "messageVersion": "1.0",
+  "sessionAttributes": {}
+}

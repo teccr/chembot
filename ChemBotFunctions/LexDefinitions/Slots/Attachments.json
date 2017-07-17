@@ -1,0 +1,15 @@
+{
+    "enumerationValues": [
+        {
+            "value": "SDF"
+        }, 
+        {
+            "value": "Structure"
+        }, 
+        {
+            "value": "None"
+        }
+    ], 
+    "name": "Attachments", 
+    "description": "Information to attach"
+}
