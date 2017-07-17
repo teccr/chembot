@@ -76,6 +76,8 @@ The following procedure is pretty similar with one modification in the permissio
 * Save changes.
 * Navigate to "Event Subscriptions". Turn on the events.
 * Set Request URL to "Postback URL" from the Amazon Lex Console.
-* Subscribe to the message.im bot event.
+* Subscribe to the following bot events:
+	* message.im
+	* message.channels
 * Save changes.
 * Finally, add the Bot to a channel.
