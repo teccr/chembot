@@ -12,9 +12,9 @@ Add the ChemBot application to your Slack account (Alpha version):
 
 In a scientific environment, it is important to have references about chemical compounds and its properties. It is common to see third party vendors offering specific solutions and catalogs to consult this information.
 
-ChemBot uses Slack to provide a user-friendly interface to interact with Chemical Compound information. The bot connects to PubChem public services hosted by the National Center for Biotechnology Information ([PubChem](https://www.youtube.com/watch?v=-eNxsNd8sC4) mission). Using ChemBot, developers and scientists can get information and export results as files to be used in third party applications. The out of the box features in Slack give the users an powerful tool to share results quickly, visualize them and follow the progress on the work related to each result. 
+ChemBot uses Slack to provide a user-friendly interface to interact with Chemical Compound information. The bot connects to PubChem public services hosted by the National Center for Biotechnology Information ([PubChem](https://www.youtube.com/watch?v=-eNxsNd8sC4) mission). Using ChemBot, developers and scientists can get information and export results as files to be used in third party applications. The out of the box features in Slack give the users a powerful tool to share results quickly, visualize them and follow the progress on the work related to each result. 
 
-For instructions on how to use ChemBot, please visit ChemBot's [tutorial](https://google.com).
+For instructions on how to use ChemBot, please visit ChemBot's [Overview](https://google.com). For further details, visit the help section of this document.
 
 ## Requirements to work with the source code:
 * Visual Studio 2017 Community Edition / Dot Net Core 1.0/1.1
@@ -68,16 +68,16 @@ The following procedure is pretty similar with one modification in the permissio
 * Select "OAuth & Permissions"
 * In "Redirect URLs", add a new Redirect URL and enter the "OAuth URL" from the AWS Console.
 * In Permission scopes, add the following permissions: 
-	* chat:write:bot
-	* team:read
-	* channels:history
+    * chat:write:bot
+    * team:read
+    * channels:history
 * Save changes
 * Navigate to "Interactive Messages", set the "Request URL" field to the value of "Postback URL" from the AWS Console.
 * Save changes.
 * Navigate to "Event Subscriptions". Turn on the events.
 * Set Request URL to "Postback URL" from the Amazon Lex Console.
 * Subscribe to the following bot events:
-	* message.im
-	* message.channels
+    * message.im
+    * message.channels
 * Save changes.
 * Finally, add the Bot to a channel.
