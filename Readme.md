@@ -106,15 +106,15 @@ please help me
 
 # Challenges and Limitations
 
-## Chemistry domain knowledge and Amazon Lex
-Amazon Lex does a good job most of the times when dealing with chemistry domain concepts. However, sometimes Amazon Lex may have issues. 
+## Chemistry domain knowledge and Slack/AWS Lex
+Amazon Lex does a good job most of the times when dealing with chemistry domain concepts. However, sometimes the final Slack bot may have issues. 
 Example:
-* Lex cannot recognized the following SMILES as search criteria: C(C1C(C(C(C(O1)O)O)O)O)O (glucose).
-* Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)O (Aspirin).
-* Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)OC2=CC=CC(=C2)CO[N+](=O)[O-] (Nitroaspirin).
+* ChemBot cannot recognized the following SMILES as search criteria: C(C1C(C(C(C(O1)O)O)O)O)O (glucose).
+* ChemBot can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)O (Aspirin).
+* ChemBot can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)OC2=CC=CC(=C2)CO[N+](=O)[O-] (Nitroaspirin).
 
-Chemical structure names, InChi and SMILES can generate issues when parsing the user input. After different tests on ChemBot, moving detection of SMILES, InCHi and names to custom code look like a potential solution. Research on Lambda for Initialization and Validation is pending to deal with the issues mentioned in this section. It is possible the validation code will not be triggered since the SMILES is not picked up by Lex.
-Finally, changing the design of Intents and Slots Types could help Amazon Lex to learn and understand complex chemistry concepts. Intents for only SMILES search may be able to focus Lex resources on looking for complex data. A new ChemBot will be created in the future with a new design of Intents and Slot types.
+Chemical structure names, InChi and SMILES can generate issues when parsing the user input. After some investigation, the issue seems to be related to Slack UI and how it processes certain character combinations. From Amazon Lext test chat bot, it is possible to recognize most of the SMILES. Another issue is AWS Lex rejecting the "Flash Card" Chemical Property even if it was defined as an utterance in the Slot Type. One theory to explain the behavior could be the design of the bot intents and Slot Types.
+Changing the design of Intents and Slots Types could help Amazon Lex to learn and understand different concepts. Intents for only SMILES search may be able to focus Lex resources on looking for complex data and working on deeper with the Slack UI may be a problem to solve issues with the combination of characters. A new ChemBot will be created in the future with a new design of Intents, Slot types and Slack UI improvements.
 
 ## What's next?
 ChemBot can receive the following improvements:
