@@ -94,6 +94,7 @@ The data will be added as Slack attachments to the message. The options for atta
 * None: No Attachment will be added.
 * Structure: PNG with the Chemical structure.
 * SDF: Link to SDF file containing chemical structure and properties.
+
 Finally, each successful request will always return an attachment: PubChem Reference. This attachment will contain a link to the PubChem web site. The link will show all the available information for the chemical structure.
 
 ## Help Intent
@@ -111,6 +112,7 @@ Example:
 * Lex cannot recognized the following SMILES as search criteria: C(C1C(C(C(C(O1)O)O)O)O)O (glucose).
 * Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)O (Aspirin).
 * Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)OC2=CC=CC(=C2)CO[N+](=O)[O-] (Nitroaspirin).
+
 Chemical Structure names, InChi and SMILES can generate issues parsing the user input. After the different tests on ChemBot, moving detection of SMILES, InCHi and names to custom code look like a potential solution. Research on Lambda for Initialization and Validation is pending to deal with the issues mentioned in this section. It is possible the validation code will not be trigger since the SMILES is not picked up by Lex.
 Finally, changing the design of Intents and Slots Types could help Amazon Lex to learn and understand complex chemistry concepts. Intents for only SMILES search may be able to focus Lex resources on looking for complex data. A new ChemBot will be created in the future with a new design of Intents and Slot types.
 
@@ -118,6 +120,7 @@ Finally, changing the design of Intents and Slots Types could help Amazon Lex to
 ChemBot can receive the following improvements:
 * Parsing chemistry domain knowledge
 * Adding an AWS cache for images and web requests.
+
 However, the biggest step forward for ChemBot is integration with third party product. Software vendors in the pharmaceutical industry have a number of systems that will benefit from integration with Smart bots. Substance catalogs used to search and buy reactants can be simplified into a chatbot user. Unfortunately, the most important providers don't have public APIs to built on top of it. Showing the power of smart bots may attract interest in building solutions to simplify the life of scientists and students.
 Another important piece is the integration with Electronic Notebooks. This kind of product is the fundamental component in pharmaceutical/biotechnological enterprises to record all the R&D process and results across time. One frequent problem is how to get data out of the systems quickly in a secure way and how to share it accordingly. Being able to look for a reagent in a substance catalog, share it with the team in a channel and once it is approved, deploy it to the electronic notebook record associated with the channel.
 Chemistry/Biotechnology has many needs regarding system integration and data sharing following security standards. The sector can benefit from smart assistants. 
