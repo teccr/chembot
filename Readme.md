@@ -14,6 +14,8 @@ In a scientific environment, is important to have references about the chemical 
 
 ChemBot uses Slack to provide a user-friendly interface to interact with chemical compound information. The bot connects to PubChem's public services, hosted by the National Center for Biotechnology Information ([PubChem](https://www.youtube.com/watch?v=-eNxsNd8sC4) mission). Using ChemBot, developers and scientists can get information and export results as files to be used in third party applications. The out of the box features in Slack give the users a powerful tool to share results quickly, visualize them and follow the progress on the work related to each result. 
 
+It is important to mention that some problems were found when working with Chemistry data in Slack/AWS Lex ([Challenges and Limitations](#challenges-and-limitations)). Although, there are numerous opportunities for smart bot applications in Pharmacy and Biotechnology.
+
 For instructions on how to use ChemBot, please visit ChemBot's [Overview](https://google.com). For further details, visit the help section of this document.
 
 # Table of Contents
