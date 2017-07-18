@@ -16,7 +16,7 @@ ChemBot uses Slack to provide a user-friendly interface to interact with chemica
 
 It is important to mention that some problems were found when working with Chemistry data in Slack/AWS Lex ([Challenges and Limitations](#challenges-and-limitations)). Although, there are numerous opportunities for smart bot applications in Pharmacy and Biotechnology.
 
-For instructions on how to use ChemBot, please visit ChemBot's [Overview](https://google.com). For further details, visit the help section of this document.
+For instructions on how to use ChemBot, please visit ChemBot's [Overview](https://youtu.be/tCOmNmQMf3s). For further details, visit the help section of this document.
 
 # Table of Contents
 [Help](#chembot-help)
