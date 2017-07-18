@@ -17,5 +17,9 @@
         }
     ], 
     "name": "CompoundIdType", 
+    "checksum": "35a27eeb-dc71-45aa-ae87-56ff27c3f8a0", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1498426251.946, 
+    "createdDate": 1498426251.946, 
     "description": "Type of Compound Identifiers"
 }

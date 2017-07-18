@@ -1,5 +1,6 @@
 {
     "name": "ChemicalCompoundInformation", 
+    "checksum": "9b83dfe7-fa93-47e4-bc50-19f10e1af5f6", 
     "conclusionStatement": {
         "messages": [
             {
@@ -16,6 +17,9 @@
             }
         ]
     }, 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1500355216.507, 
+    "createdDate": 1498534851.66, 
     "sampleUtterances": [
         "what is the {PropertyToSearch} of {CompoundToSearch}", 
         "show me data for {CompoundToSearch}", 
@@ -28,7 +32,10 @@
         "get {PropertyToSearch}", 
         "get data for {CompoundToSearch}", 
         "Need {PropertyToSearch}", 
-        "Need {PropertyToSearch} for {CompoundToSearch}"
+        "Need {PropertyToSearch} for {CompoundToSearch}", 
+        "get {PropertyToSearch} of {CompoundToSearch}", 
+        "show {PropertyToSearch} of {CompoundToSearch}", 
+        "Need {PropertyToSearch} of {CompoundToSearch}"
     ], 
     "slots": [
         {

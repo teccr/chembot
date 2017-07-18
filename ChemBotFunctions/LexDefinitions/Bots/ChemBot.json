@@ -1,16 +1,18 @@
 {
+    "status": "READY", 
     "intents": [
         {
-            "intentVersion": "4", 
+            "intentVersion": "6", 
             "intentName": "ChemBotHelpInformation"
         }, 
         {
-            "intentVersion": "16", 
+            "intentVersion": "17", 
             "intentName": "ChemicalCompoundInformation"
         }
     ], 
     "name": "ChemBotAssistant", 
     "locale": "en-US", 
+    "checksum": "7e9aff29-b7cb-41c6-b25c-8519b3f8188f", 
     "abortStatement": {
         "messages": [
             {
@@ -27,6 +29,9 @@
             }
         ]
     }, 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1500355474.631, 
+    "createdDate": 1500248567.324, 
     "clarificationPrompt": {
         "maxAttempts": 5, 
         "messages": [

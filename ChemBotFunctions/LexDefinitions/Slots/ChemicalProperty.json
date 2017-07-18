@@ -131,5 +131,9 @@
         }
     ], 
     "name": "ChemicalProperty", 
+    "checksum": "7c1e7423-c54f-463d-9ffa-027a3fc00a27", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1500164299.953, 
+    "createdDate": 1498535093.085, 
     "description": "Chemical property to search"
 }

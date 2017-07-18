@@ -11,5 +11,9 @@
         }
     ], 
     "name": "Attachments", 
+    "checksum": "940c57df-f4f2-4ef6-8d7a-d9bfb5902890", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1499678546.003, 
+    "createdDate": 1499678468.597, 
     "description": "Information to attach"
 }

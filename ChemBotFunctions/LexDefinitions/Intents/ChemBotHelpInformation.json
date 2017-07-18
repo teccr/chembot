@@ -1,13 +1,17 @@
 {
     "name": "ChemBotHelpInformation", 
+    "checksum": "144185be-396a-49c3-a99f-1f3b15702fff", 
+    "version": "$LATEST", 
+    "lastUpdatedDate": 1500355439.089, 
+    "createdDate": 1500105393.059, 
     "sampleUtterances": [
         "help me", 
         "please help me", 
-        "I need help", 
-        "I need some help", 
-        "I need assistence", 
         "can you help me", 
-        "can you assist me"
+        "can you assist me", 
+        "I require assistance", 
+        "Can you help me out", 
+        "help me out"
     ], 
     "slots": [
         {

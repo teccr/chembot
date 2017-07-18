@@ -14,5 +14,8 @@
             "value": "Chemical Properties"
         }
     ], 
-    "name": "ChemBotHelpCriteriaSelection"
+    "name": "ChemBotHelpCriteriaSelection", 
+    "createdDate": 1500142076.295, 
+    "checksum": "a7454ba5-59c4-4dba-9369-2eb8f70b04b1", 
+    "lastUpdatedDate": 1500142076.295
 }
