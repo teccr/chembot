@@ -2,17 +2,17 @@
 
 This bot contains the following features:
 * Slack Integration - It was designed to run as a Slack Application.
-* PubChem Integration - The bot connects to PubChem Public services to get information about compounds.
-* Retrieval of chemical compound - Allows the user to retrieve chemical compound information. 
-* Download SDF files - Allow users to get SDF files with chemical properties and chemical structure information.
+* PubChem Integration - The bot connects to PubChem Public services to get information about chemical compounds.
+* Retrieval of chemical compound data - Allows the user to retrieve chemical compound information. 
+* Download SDF files - Allows users to obtain SDF files with chemical properties and chemical structure information.
 
 Add the ChemBot application to your Slack account (Alpha version):
 
 <a href="https://slack.com/oauth/authorize?&client_id=201891926391.213563214386&scope=bot,chat:write:bot,team:read,channels:history"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
 
-In a scientific environment, it is important to have references about chemical compounds and its properties. It is common to see third party vendors offering specific solutions and catalogs to consult this information.
+In a scientific environment, is important to have references about the chemical compounds and their properties. Various vendors offer specific solutions and catalogs to consult this information.
 
-ChemBot uses Slack to provide a user-friendly interface to interact with Chemical Compound information. The bot connects to PubChem public services hosted by the National Center for Biotechnology Information ([PubChem](https://www.youtube.com/watch?v=-eNxsNd8sC4) mission). Using ChemBot, developers and scientists can get information and export results as files to be used in third party applications. The out of the box features in Slack give the users a powerful tool to share results quickly, visualize them and follow the progress on the work related to each result. 
+ChemBot uses Slack to provide a user-friendly interface to interact with chemical compound information. The bot connects to PubChem's public services, hosted by the National Center for Biotechnology Information ([PubChem](https://www.youtube.com/watch?v=-eNxsNd8sC4) mission). Using ChemBot, developers and scientists can get information and export results as files to be used in third party applications. The out of the box features in Slack give the users a powerful tool to share results quickly, visualize them and follow the progress on the work related to each result. 
 
 For instructions on how to use ChemBot, please visit ChemBot's [Overview](https://google.com). For further details, visit the help section of this document.
 
@@ -26,40 +26,40 @@ For instructions on how to use ChemBot, please visit ChemBot's [Overview](https:
 # ChemBot Help
 
 ## Basic Interaction
-The user interacts with Chembo by asking questions to retrieve chemical Compound data. Example:
+The user interacts with ChemBot by asking questions to retrieve chemical compound data. Example:
 ```
 Get molecular formula for aspirin
 ```
 A search request will contain the following parts:
-* ID Type (Identifier Type): Unique identifier to be used in the search. The PubChem REST API requires an explicit specification of the ID Type to use.
+* ID Type (Identifier Type): A unique identifier to be used in the search. The PubChem REST API requires an explicit specification of the ID Type to use.
 * Search Criteria: The value for the identifier. The data will be retrieved based on this field.
-* Chemical Property to retrieve: Compound property to retrieve from PubChem database.
+* Chemical Property to retrieve: The compound property to retrieve from the PubChem database.
 * Attachments: Additional information to show in the result for each ChemBot request.
 
 ## Identifier Types
-The user must work with the available identifier types. They correspond to a PubChem requirement. When the user gets a pop-up asking ID Type, choose the one corresponding to the current search. You can also type the value.
+The user must work with the available identifier types, each one corresponds to a PubChem requirement. When the user gets a pop-up asking ID Type, they have to choose the one corresponding to the current search, they can also type the specific value.
 ChemBot supports the following Identifier Types:
 * name: Chemical name or any synonym available in the PubChemd system.
-* cid: PubChem Compound Identification. Non-zero integer and a unique identifier for chemical structures.
+* cid: PubChem Compound Identification. A non-zero integer and a unique identifier for chemical structures.
 * smiles: Simplified Molecular Input Line Entry System. It is a chemical structure line notation for representing molecules. It uses printable characters and may include wildcards.
-* inchi key:  IUPAC International Chemical Identifier, a chemical structure line notation.
+* inchi key:  IUPAC International Chemical Identifier. It is a chemical structure line notation used for representing molecules.
 * sid: Unique identifier for a depositor-supplied molecule. It is an external registry ID provided by another data source.
 
 ## Search Criteria
-A value corresponding an identifier type.It will be used as the search criteria to retrieve compound information.
-Example:
+A value corresponding an identifier type. It will be used as the search criteria to retrieve the compound information.
+Example 1:
 ```
 What is the exact mass for glucose?
 ```
-In the previous query, the search criteria are "glucose" and the identifier type is "name". 
-Another example:
+In this query the search criteria is "glucose" and the identifier type is "name". 
+Example 2:
 ```
 get name for CC1=CC=CC=C1
 ```
-In the previous case, the 'CC1=CC=CC=C1' is the search criteria (it is a SMILES value).
+For this case the "CC1=CC=CC=C1" is the search criteria (it is a SMILES value) and the identifier type is "name". 
 
 ## Chemical Properties
-ChemBot allows the slack user to retrieve a good number of chemical properties with different permutations:
+ChemBot allows the Slack user to retrieve a good number of chemical properties with different permutations:
 * Molecular Formula (MF, mol formula, formula).
 * Molecular Weight (MW, mol weight, weight).
 * Canonical SMILES (cs, csmiles, smiles).
@@ -89,13 +89,13 @@ ChemBot allows the slack user to retrieve a good number of chemical properties w
 The Slack user can access even more information with attachments (see next section).
 
 ## Attachments
-When the user sends a query to ChemBot backend, the bot asks if it should attach additional information to the results. 
+When the user sends a query to the ChemBot backend, the bot asks if it should attach additional information to the results. 
 The data will be added as Slack attachments to the message. The options for attachments are:
 * None: No Attachment will be added.
 * Structure: PNG with the Chemical structure.
 * SDF: Link to SDF file containing chemical structure and properties.
 
-Finally, each successful request will always return an attachment: PubChem Reference. This attachment will contain a link to the PubChem web site. The link will show all the available information for the chemical structure.
+Additionally, successful requests will always return an attachment called 'PubChem Reference'. This attachment will contain a link to the PubChem web site. The link will show all the available information for the chemical structure.
 
 ## Help Intent
 There is a help intent in ChemBot. The user can request for help and choose between different topics.
@@ -107,13 +107,13 @@ please help me
 # Challenges and Limitations
 
 ## Chemistry domain knowledge and Amazon Lex
-Amazon Lex does a good job a lot of times when dealing with chemistry domain concepts. However, sometimes Amazon Lex may have issues. 
+Amazon Lex does a good job most of the times when dealing with chemistry domain concepts. However, sometimes Amazon Lex may have issues. 
 Example:
 * Lex cannot recognized the following SMILES as search criteria: C(C1C(C(C(C(O1)O)O)O)O)O (glucose).
 * Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)O (Aspirin).
 * Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)OC2=CC=CC(=C2)CO[N+](=O)[O-] (Nitroaspirin).
 
-Chemical Structure names, InChi and SMILES can generate issues parsing the user input. After the different tests on ChemBot, moving detection of SMILES, InCHi and names to custom code look like a potential solution. Research on Lambda for Initialization and Validation is pending to deal with the issues mentioned in this section. It is possible the validation code will not be trigger since the SMILES is not picked up by Lex.
+Chemical structure names, InChi and SMILES can generate issues when parsing the user input. After different tests on ChemBot, moving detection of SMILES, InCHi and names to custom code look like a potential solution. Research on Lambda for Initialization and Validation is pending to deal with the issues mentioned in this section. It is possible the validation code will not be triggered since the SMILES is not picked up by Lex.
 Finally, changing the design of Intents and Slots Types could help Amazon Lex to learn and understand complex chemistry concepts. Intents for only SMILES search may be able to focus Lex resources on looking for complex data. A new ChemBot will be created in the future with a new design of Intents and Slot types.
 
 ## What's next?
@@ -121,9 +121,10 @@ ChemBot can receive the following improvements:
 * Parsing chemistry domain knowledge
 * Adding an AWS cache for images and web requests.
 
-However, the biggest step forward for ChemBot is integration with third party product. Software vendors in the pharmaceutical industry have a number of systems that will benefit from integration with Smart bots. Substance catalogs used to search and buy reactants can be simplified into a chatbot user. Unfortunately, the most important providers don't have public APIs to built on top of it. Showing the power of smart bots may attract interest in building solutions to simplify the life of scientists and students.
-Another important piece is the integration with Electronic Notebooks. This kind of product is the fundamental component in pharmaceutical/biotechnological enterprises to record all the R&D process and results across time. One frequent problem is how to get data out of the systems quickly in a secure way and how to share it accordingly. Being able to look for a reagent in a substance catalog, share it with the team in a channel and once it is approved, deploy it to the electronic notebook record associated with the channel.
-Chemistry/Biotechnology has many needs regarding system integration and data sharing following security standards. The sector can benefit from smart assistants. 
+However, the biggest step forward for ChemBot is integration with a third party product. Software vendors in the pharmaceutical industry have a number of systems that will benefit from integration with Smart Bots. 
+Substance Catalogs use to search and buy reactants can be simplified into a chatbot user. Unfortunately, the most important providers don't have public APIs to built on top of it. Showing the power of smart bots may attract interest in building solutions to simplify the life of scientists and students.
+Another important piece is the integration with Electronic Notebooks. This kind of product is a fundamental part of pharmaceutical/biotechnological enterprises as is used to record all the R&D process and results across time. One frequent problem is how to get data out of the systems quickly in a secure way and how to share it accordingly. Being able to look for a reagent in a substance catalog, share it with the team in a channel and once it is approved, deploy it to the electronic notebook record associated with the channel.
+The Chemistry/Biotechnology Industry has many needs regarding system integration and large data management following security standards. The sector can benefit from smart assistants, like ChemBot, to simply the process of searching and sharing specific data among interested parties.
 
 # ChemBot Custom Deployment
 
