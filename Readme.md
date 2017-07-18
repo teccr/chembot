@@ -112,6 +112,7 @@ Example:
 * Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)O (Aspirin).
 * Lex can recognize the following SMILES as search criteria: CC(=O)OC1=CC=CC=C1C(=O)OC2=CC=CC(=C2)CO[N+](=O)[O-] (Nitroaspirin).
 Chemical Structure names, InChi and SMILES can generate issues parsing the user input. After the different tests on ChemBot, moving detection of SMILES, InCHi and names to custom code look like a potential solution. Research on Lambda for Initialization and Validation is pending to deal with the issues mentioned in this section. It is possible the validation code will not be trigger since the SMILES is not picked up by Lex.
+Finally, changing the design of Intents and Slots Types could help Amazon Lex to learn and understand complex chemistry concepts. Intents for only SMILES search may be able to focus Lex resources on looking for complex data. A new ChemBot will be created in the future with a new design of Intents and Slot types.
 
 ## What's next?
 ChemBot can receive the following improvements:
