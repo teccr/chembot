@@ -16,6 +16,100 @@ ChemBot uses Slack to provide a user-friendly interface to interact with Chemica
 
 For instructions on how to use ChemBot, please visit ChemBot's [Overview](https://google.com). For further details, visit the help section of this document.
 
+# Table of Contents
+[1-Help](#chembot-help)
+
+[2-Challenges and Limitations](#challenges-and-limitations)
+
+[3-ChemBot Custom Deployment](#chembot-custom-deployment)
+
+# ChemBot Help
+
+## Basic Interaction
+The user interacts with Chembo by asking questions to retrieve chemical Compound data. Example:
+```
+Get molecular formula for aspirin
+```
+A search request will contain the following parts:
+* ID Type (Identifier Type): Unique identifier to be used in the search. The PubChem REST API requires an explicit specification of the ID Type to use.
+* Search Criteria: The value for the identifier. The data will be retrieve based on this field.
+* Chemical Property to retrieve: Compound property to retrieve from PubChem database.
+* Attachments: Additional information to show in the result fo each ChemBot request.
+
+## Identifier Types
+The user must work with the available identifier types. They correspond to a PubChem requirement. When the user gets a pop-up asking ID Type, choose the one corresponding to the current search. You can also type the value.
+ChemBot supports the following Identifier Types:
+* name: Chemical name or any synonym available in the PubChemd system.
+* cid: PubChem Compound Identification. Non-zero integer and unique identifier for chemical structures.
+* smiles: Simplified Molecular Input Line Entry System. It is a chemical structure line notation for representing molecules. It uses printable characters and may include wildcards.
+* inchi key:  IUPAC International Chemical Identifier, a chemical structure line notation.
+* sid: Unique identifier for a depositor-supplied molecule. It is an external registry ID provided by another data source.
+
+## Search Criteria
+A value corresponding an identifier type.It will be used as the search criteria to retrieve compound information.
+Example:
+```
+What is the exact mass for glucose?
+```
+In the previous query the search criteria is "glucose" and the identifier type is "name". 
+Another example:
+```
+get name for CC1=CC=CC=C1
+```
+In the previous case, the 'CC1=CC=CC=C1' is the search criteria (it is an SMILES value).
+
+## Chemical Properties
+ChemBot allow the slack user to retrieve a good number of chemical properties with different permutations:
+* Molecular Formula (MF, mol formula, formula).
+* Molecular Weight (MW, mol weight, weight).
+* Canonical SMILES (cs, csmiles, smiles).
+* Isomeric SMILES (iso smiles, ismiles).
+* InChi.
+* InChiKey (ikey).
+* IUPAC Name (name, iupac, iname).
+* XLogP (log p).
+* Exact mass (mass).
+* Monoisotopic mass (mono iso mas, mono isotopic mass, isotopic mass, iso mass).
+* Topological Polar Surface Area (TSPA).
+* Hydrogen Bond Donor Count (h bond donor count, h bond donor, bond donor, hydrogen bond donor).
+* Hydrogen Bond Acceptor Count (h bond acceptor count, h bond acceptor, bond acceptor).
+* Rotatable Bond Count (rotatable bond count, rotatable bond).
+* Heavy Atom Count (heavy atom count, heavy atoms).
+* Isotope Atom Count (isotope atom count, isotope atoms).
+* Atom Stereo Count (atom stereo count, atom stereo).
+* Defined Atom Stereocenter Count (defined atom stereo count, defined atom stereo, defined atom ).
+* Undefined Atom Stereocenter Count (undefined bond stereo count, undefined bond stereo).
+* Bond Stereo Count (bond stereo count, bond stereo).
+* Covalently-Bonded Unit Count (covalent unit count, covalent unit, covalent units, covalent bonded units).
+* Conformer analytic volume (volume 3d, Conformer analytic volume).
+* Steric quadrupole length.
+* Steric quadrupole width.
+* Steric quadrupole height.
+* Features per compound count (features per compound).
+The Slack user can access even more information with attachments (see next section).
+
+## Attachments
+When the user sends a query to ChemBot backend, the bot ask if it should attach additional information to the results. 
+The data will be added as Slack attachments to the message. The options for attachments are:
+* None: No Attachment will be added.
+* Structure: PNG with the Chemical structure.
+* SDF: Link to SDF file containing chemical structure and properties.
+Finally, each successful request will always return an attachment: PubChem Reference. This attachment will contain a link to the PubChem web site. The link will show all the available information for the chemical structure.
+
+# Challenges and Limitations
+
+
+## Specific Domain knowledge in Amazon Lex
+
+
+## UI Design and bot interactions
+
+
+## What's next?
+
+
+# ChemBot Custom Deployment
+
 ## Requirements to work with the source code:
 * Visual Studio 2017 Community Edition / Dot Net Core 1.0/1.1
 * AWS Toolkit for Visual Studio 2017.
