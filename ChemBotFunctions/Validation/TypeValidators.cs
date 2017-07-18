@@ -51,8 +51,8 @@ namespace ChemBotFunctions.Validation
                     { "h bond donor count", "HBondDonorCount" }, { "h bond donor", "HBondDonorCount" }, { "bond donor", "HBondDonorCount" }, { "hydrogen bond donor", "HBondDonorCount" },
                     { "h bond acceptor count", "HBondAcceptorCount" }, { "h bond acceptor", "HBondDonorCount" }, { "bond acceptor", "HBondDonorCount" },
                     { "rotatable bond count", "RotatableBondCount" }, { "rotatable bond", "RotatableBondCount" },
-                    { "heavy atom count", "HeavyAtomCount" }, { "heavy atom", "HeavyAtomCount" },
-                    { "isotope atom count", "IsotopeAtomCount" }, { "isotope atom", "IsotopeAtomCount" },
+                    { "heavy atom count", "HeavyAtomCount" }, { "heavy atoms", "HeavyAtomCount" },
+                    { "isotope atom count", "IsotopeAtomCount" }, { "isotope atoms", "IsotopeAtomCount" },
                     { "atom stereo count", "AtomStereoCount" }, { "atom stereo", "AtomStereoCount" },
                     { "defined atom stereo count", "DefinedAtomStereoCount" }, { "defined atom stereo", "DefinedAtomStereoCount" }, { "defined atom", "DefinedAtomStereoCount" },
                     { "undefined atom stereo count", "UndefinedAtomStereoCount" }, { "undefined atom stereo", "UndefinedAtomStereoCount" }, { "undefined atom", "UndefinedAtomStereoCount" },
@@ -60,8 +60,8 @@ namespace ChemBotFunctions.Validation
                     { "defined bond stereo count", "DefinedBondStereoCount" }, { "defined bond stereo", "DefinedBondStereoCount" },
                     { "undefined bond stereo count", "UndefinedBondStereoCount" }, { "undefined bond stereo", "UndefinedBondStereoCount" },
                     { "covalent unit count", "CovalentUnitCount" }, { "covalent unit", "CovalentUnitCount" }, { "covalent units", "CovalentUnitCount" }, { "covalent bonded units", "CovalentUnitCount" },
-                    { "volume 3d", "Volume3D" }, { "Conformer analytic volume", "Volume3D" },
-                    { "Steric quadrupole length", "XStericQuadrupole3D" }, { "Steric quadrupole width", "YStericQuadrupole3D" }, { "Steric quadrupole height", "ZStericQuadrupole3D" },
+                    { "volume 3d", "Volume3D" }, { "conformer analytic volume", "Volume3D" },
+                    { "steric quadrupole length", "XStericQuadrupole3D" }, { "steric quadrupole width", "YStericQuadrupole3D" }, { "steric quadrupole height", "ZStericQuadrupole3D" },
                     { "features per compound count" , "FeatureCount3D" }, { "features per compound" , "FeatureCount3D" }
                 }
             ).ToImmutableDictionary();

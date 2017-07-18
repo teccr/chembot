@@ -129,11 +129,11 @@ namespace ChemBotFunctions.Utils
 
         #region Attachments
 
-        internal const string ATTACHMENT_SDF = "SDF";
+        internal const string ATTACHMENT_SDF = "sdf";
 
         internal const string ATTACHMENT_SDF_TITLE = "Download SDF";
 
-        internal const string ATTACHMENT_STRUCTURE = "Structure";
+        internal const string ATTACHMENT_STRUCTURE = "structure";
 
         internal const string ATTACHMENT_STRUCTURE_TITLE = "Chemical Structure";
 

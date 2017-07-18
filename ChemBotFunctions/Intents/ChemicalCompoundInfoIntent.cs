@@ -147,7 +147,7 @@ namespace ChemBotFunctions.Intents
                 IdentifierType = slots.ContainsKey(SLOT_ID_TYPE) ? slots[SLOT_ID_TYPE] : null,
                 PropertyToRetrieve = slots.ContainsKey(SLOT_PROPERTY_TO_SEARCH) ? slots[SLOT_PROPERTY_TO_SEARCH] : null,
                 SearchCriteria = slots.ContainsKey(SLOT_COMPOUND_TO_SEARCH) ? slots[SLOT_COMPOUND_TO_SEARCH] : null,
-                Attachment = slots.ContainsKey(SLOT_ATTACHMENT) ? slots[SLOT_ATTACHMENT] : null
+                Attachment = slots.ContainsKey(SLOT_ATTACHMENT) ? slots[SLOT_ATTACHMENT].ToLower() : null
             };
 
             return request;
